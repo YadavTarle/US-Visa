@@ -15,6 +15,8 @@
 # print(mongo_db_url)
 
 from us_visa.pipeline.training_pipeline import TrainPipeline
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
 
 obj = TrainPipeline()
 obj.run_pipeline()
