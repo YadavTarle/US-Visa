@@ -13,6 +13,7 @@ PIPELINE_NAME: str = "usvisa"
 ARTIFACT_DIR: str = "artifact"
 
 FILE_NAME:str = "EasyVisa.csv"
+
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 
@@ -23,6 +24,10 @@ CURRENT_YEAR = date.today().year
 PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 SCHEMA_FILE_PATH = os.path.abspath(r"D:\US_visaProject\US-Visa\config\schema.yaml")
 #SCHEMA_FILE_PATH = os.path.join(os.path.dirname(__file__), "..", "config", "schema.yaml")
+
+AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
+AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
+REGION_NAME = "us-east-1"
 
 """
 Data Ingestion related constants start with DATA_INGESTION VAR NAME
@@ -47,3 +52,21 @@ DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
 
+"""
+Model Trainer realted constant start with MODEL_TRAINER var name
+"""
+MODEL_TRAINER_DIR_NAME: str = "model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
+MODEL_TRAINER_TRAINED_MODEL_NAME:str = "model.pkl"
+MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
+MODEL_TRAINER_MODEL_CONFIG_FILE_PATH: str = os.path.abspath(r"D:\US_visaProject\US-Visa\config\model.yaml")
+
+"""
+Model Evaluation related constatns
+"""
+MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
+MODEL_BUCKET_NAME = "usvisa-model2025"
+MODEL_PUSHER_S3_KEY = "model-registry"
+
+APP_HOST = "0.0.0.0"
+APP_PORT = 8080
